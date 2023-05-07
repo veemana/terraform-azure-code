@@ -22,6 +22,7 @@ pipeline {
 
     stage('Terraform Init') {
       steps {
+       sh 'yum install pip'
        sh 'pip install az'
        sh 'terraform init'
       }
