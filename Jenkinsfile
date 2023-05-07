@@ -22,7 +22,7 @@ pipeline {
 
     stage('Terraform Init') {
       steps {
-       sh 'uname -a'
+       sh 'cat /etc/redhat-release'
        sh 'terraform init'
       }
     }
