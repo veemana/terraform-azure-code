@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'hashicorp/terraform:latest'
+      image 'zenika/terraform-azure-cli'
       args '--entrypoint="" -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
