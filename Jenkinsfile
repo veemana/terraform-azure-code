@@ -22,7 +22,7 @@ pipeline {
 
     stage('Terraform Init') {
       steps {
-       sh 'yum install pip'
+       sh 'apt-get install -y git curl apache2 php5 libapache2-mod-php5 php5-mcrypt php5-mysql python3.4 python-pip'
        sh 'pip install az'
        sh 'terraform init'
       }
