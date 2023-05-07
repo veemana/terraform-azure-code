@@ -28,13 +28,13 @@ pipeline {
 
     stage('Terraform Plan') {
       steps {
-        sh 'terraform plan -var "subscription_id1=${env:s_id}" -var "client_id1=${env:c_id}" -var "client_id1=${env:c_secret}" -var "tenant_id1=${env:t_id}"'
+        sh 'terraform plan -var "subscription_id1=${env:s_id}" -var "client_id1=${env:c_id}" -var "client_secret1=${env:c_secret}" -var "tenant_id1=${env:t_id}"'
       }
     }
 
     stage('Terraform Apply') {
       steps {
-        sh 'terraform apply -var "subscription_id1=${env:s_id}" -var "client_id1=${env:c_id}" -var "client_id1=${env:c_secret}" -var "tenant_id1=${env:t_id}" -auto-approve'
+        sh 'terraform apply -var "subscription_id1=${env:s_id}" -var "client_id1=${env:c_id}" -var "client_secret1=${env:c_secret}" -var "tenant_id1=${env:t_id}" -auto-approve'
       }
     }
   }
