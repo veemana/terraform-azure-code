@@ -17,7 +17,7 @@ pipeline {
   stages {
     stage('Install Azure CLI') {
             steps {
-                sh "curl -sL https://aka.ms/InstallAzureCLIDeb | bash"
+                sh "curl -sL https://aka.ms/InstallAzureCLIDeb | sh"
             }
         }
 
