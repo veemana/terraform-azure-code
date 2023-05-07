@@ -22,6 +22,7 @@ pipeline {
 
     stage('Terraform Init') {
       steps {
+       sh 'uname -a'
        sh 'terraform init'
       }
     }
