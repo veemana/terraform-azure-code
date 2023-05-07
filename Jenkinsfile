@@ -17,7 +17,7 @@ pipeline {
   stages {
     stage('Install Azure CLI') {
             steps {
-                sh "curl -sL https://aka.ms/InstallAzureCLIDeb | sh"
+                sh "dnf install -y https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm"
             }
         }
 
