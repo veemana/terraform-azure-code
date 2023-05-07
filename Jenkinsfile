@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'zenika/terraform-azure-cli'
+      image 'hashicorp/terraform:latest'
       args '--entrypoint="" -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
@@ -22,6 +22,7 @@ pipeline {
 
     stage('Terraform Init') {
       steps {
+       sh 'pip install az'
        sh 'terraform init'
       }
     }
