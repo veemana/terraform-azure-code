@@ -19,8 +19,8 @@ resource "null_resource" "install_azure_cli" {
       apt-get install azure-cli
 
       EOH
-
     interpreter = ["/bin/bash", "-c"]
+    }
 }
 
 provider "azurerm" {
