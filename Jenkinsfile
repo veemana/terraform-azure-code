@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'hashicorp/terraform:latest'
+      image 'terraform:latest'
       args '--entrypoint="" -v ${HOME}/.ssh:/root/.ssh'
     }
   }
@@ -17,7 +17,7 @@ pipeline {
   stages {
     stage('Install Azure CLI') {
             steps {
-                sh "curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash"
+                sh "curl -sL https://aka.ms/InstallAzureCLIDeb | bash"
             }
         }
 
